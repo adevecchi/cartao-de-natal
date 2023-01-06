@@ -6,10 +6,10 @@
 #include <stdio.h>
 
 #ifdef _WIN32
-	#include <stdlib.h>
-	#define	clrscr()	system("cls")
+    #include <stdlib.h>
+    #define clrscr()    system("cls")
 #else
-	#define clrscr()	printf("\033[H\033[J")
+    #define clrscr()    printf("\033[H\033[J")
 #endif
 
 void draw_tree(void);
@@ -27,7 +27,7 @@ void draw_tree()
 {
     printf("\n\n");
 
-	for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 4; i++)
         for (int k = 1; k < 5; k++) {
             for (int j = 1; j <= 40 - (2 * i + k); j++)
                 printf(" ");
